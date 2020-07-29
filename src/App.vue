@@ -14,8 +14,8 @@
           </div>
           <div class="menu" @click="closeMenuBread">
             <router-link to="/">首页</router-link>
-            <router-link to="/design/base">设计语言</router-link>
-            <router-link to="/develop/changelog">开发文档</router-link>
+            <router-link to="/design">设计语言</router-link>
+            <router-link to="/develop">开发文档</router-link>
             <router-link to="/component/uni">小程序/H5</router-link>
             <router-link to="/component/rn">手机 APP</router-link>
             <router-link to="/component/pc">桌面 PC</router-link>

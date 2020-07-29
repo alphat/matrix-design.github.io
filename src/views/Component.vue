@@ -1,5 +1,5 @@
 <template>
-  <div>{{ path }}</div>
+  <main></main>
 </template>
 <script>
 export default {

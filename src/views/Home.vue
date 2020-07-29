@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <main>
     <div class="banner">
       <div class="content">
         <h2>Matrix Desgin</h2>
@@ -61,7 +61,7 @@
         <span>Copyright © 2020 上海汇付数据服务有限公司</span>
       </div>
     </div>
-  </div>
+  </main>
 </template>
 
 <style lang="scss" scoped>
