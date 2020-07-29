@@ -15,10 +15,10 @@
           <div class="menu" @click="closeMenuBread">
             <router-link to="/">首页</router-link>
             <router-link to="/design/base">设计语言</router-link>
+            <router-link to="/develop/changelog">开发文档</router-link>
             <router-link to="/component/uni">小程序/H5</router-link>
             <router-link to="/component/rn">手机 APP</router-link>
             <router-link to="/component/pc">桌面 PC</router-link>
-            <router-link to="/develop/changelog">开发文档</router-link>
           </div>
         </div>
       </div>
@@ -128,6 +128,7 @@ export default {
         color: #333;
         position: relative;
         transition: all 0.4s;
+        overflow: hidden;
         &:before {
           content: "";
           position: absolute;
@@ -165,6 +166,10 @@ export default {
       margin: 15px 0 !important;
       a {
         padding: 15px !important;
+        &:before {
+          left: 15px !important;
+          right: 15px !important;
+        }
       }
     }
   }
@@ -189,8 +194,20 @@ export default {
       a {
         display: block;
         border-bottom: 1px solid #eee;
-        padding: 10px 0;
+        padding: 10px 20px;
         margin: 0 20px;
+        &:before {
+          left: -3px;
+          right: auto;
+          height: 100%;
+          width: 3px;
+          transition: all 0.3s 0.5s;
+        }
+        &.router-link-active {
+          &:before {
+            left: 0;
+          }
+        }
       }
     }
     .menu-bread {
