@@ -3,9 +3,9 @@
     <header class="nav-bar">
       <div class="nav-bar__wrapper">
         <div class="content" :class="{ 'menu-bread-open': menuBreadOpen }">
-          <a href="/" class="logo">
+          <router-link to="/" class="logo">
             <img src="./assets/logo.svg" />
-          </a>
+          </router-link>
           <div class="menu-bread" @click="toggleMenuBread">
             <div class="bread-icon top" />
             <div class="bread-icon left" />
@@ -14,11 +14,11 @@
           </div>
           <div class="menu" @click="closeMenuBread">
             <router-link to="/">首页</router-link>
-            <router-link to="/uni">设计语言</router-link>
-            <router-link to="/uni">小程序/H5</router-link>
-            <router-link to="/uni">手机 APP</router-link>
-            <router-link to="/uni">桌面 PC</router-link>
-            <router-link to="/uni">开发文档</router-link>
+            <router-link to="/design/base">设计语言</router-link>
+            <router-link to="/component/uni">小程序/H5</router-link>
+            <router-link to="/component/rn">手机 APP</router-link>
+            <router-link to="/component/pc">桌面 PC</router-link>
+            <router-link to="/develop/changelog">开发文档</router-link>
           </div>
         </div>
       </div>
@@ -122,12 +122,30 @@ export default {
       margin: 20px 0;
       height: 30px;
       a {
-        display: inline-block;
+        display: inline-flex;
         line-height: 30px;
         padding: 20px 30px;
         color: #333;
+        position: relative;
+        transition: all 0.4s;
+        &:before {
+          content: "";
+          position: absolute;
+          top: -3px;
+          left: 30px;
+          right: 30px;
+          height: 3px;
+          background-color: #0d6eff;
+          transition: all 0.4s;
+        }
         &:hover {
           color: #0d6eff;
+        }
+        &.router-link-active {
+          color: #0d6eff;
+          &:before {
+            top: 0;
+          }
         }
       }
     }

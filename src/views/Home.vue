@@ -6,7 +6,7 @@
         <h3>汇付前端组件库</h3>
         <p>追求极致的用户体验，做最便捷的组件库</p>
         <div class="btns">
-          <router-link to="/uni">开始使用</router-link>
+          <router-link to="/design/base">开始使用</router-link>
         </div>
       </div>
     </div>
