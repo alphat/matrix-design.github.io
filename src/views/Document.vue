@@ -12,9 +12,7 @@
       <div class="sidebar__bg"></div>
     </menu>
     <div class="container">
-      <div class="panel">
-        <p>{{ path }}</p>
-      </div>
+      <div class="panel" v-html="md" />
       <view class="footer">
         <view class="content">
           <text>Copyright © 2020 上海汇付数据服务有限公司</text>
@@ -24,11 +22,15 @@
   </main>
 </template>
 <script>
+import md from "../markdown/uni/README.md";
+import showdown from "showdown";
 export default {
   name: "Document",
   components: {},
   data() {
-    return {};
+    return {
+      md: new showdown.Converter().makeHtml(md),
+    };
   },
   mounted() {},
   methods: {},
