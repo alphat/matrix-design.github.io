@@ -12,7 +12,7 @@
       <div class="sidebar__bg"></div>
     </menu>
     <div class="container">
-      <div class="panel" v-html="mdHtml" />
+      <div class="panel markdown" v-html="mdHtml" />
       <view class="footer">
         <view class="content">
           <text>Copyright © 2020 上海汇付数据服务有限公司</text>
@@ -131,7 +131,7 @@ menu.sidebar {
 }
 .panel {
   margin-bottom: 30px;
-  padding: 20px;
+  padding: 30px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);

@@ -39,6 +39,19 @@ a {
   }
 }
 
+.markdown {
+  h2 {
+    margin-top: 50px;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  img {
+    width: auto;
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 767px) {
   .content {
     min-width: auto;

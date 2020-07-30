@@ -100,32 +100,15 @@ const router = createRouter({
         title: "开发文档",
       },
       component: Document,
-      redirect: "/develop/changelog",
+      redirect: "/develop/code",
       children: [
-        {
-          path: "/develop",
-          meta: {
-            title: "开发指南",
-          },
-          component: Document,
-          redirect: "/develop/changelog",
-          children: [
-            {
-              path: "/develop/changelog",
-              meta: {
-                title: "更新日志",
-              },
-              component: Document,
-            },
-          ],
-        },
         {
           path: "/develop",
           meta: {
             title: "开发规范",
           },
           component: Document,
-          redirect: "/develop/changelog",
+          redirect: "/develop/code",
           children: [
             {
               path: "/develop/code",
@@ -145,6 +128,23 @@ const router = createRouter({
               path: "/develop/commit",
               meta: {
                 title: "Git Commit 规范",
+              },
+              component: Document,
+            },
+          ],
+        },
+        {
+          path: "/develop",
+          meta: {
+            title: "开发指南",
+          },
+          component: Document,
+          redirect: "/develop/code",
+          children: [
+            {
+              path: "/develop/changelog",
+              meta: {
+                title: "更新日志",
               },
               component: Document,
             },
