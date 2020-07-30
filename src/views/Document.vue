@@ -12,7 +12,7 @@
       <div class="sidebar__bg"></div>
     </menu>
     <div class="container">
-      <div class="panel" v-html="md" />
+      <div class="panel" v-html="mdHtml" />
       <view class="footer">
         <view class="content">
           <text>Copyright © 2020 上海汇付数据服务有限公司</text>
@@ -22,24 +22,24 @@
   </main>
 </template>
 <script>
-import md from "../markdown/uni/README.md";
 import showdown from "showdown";
 export default {
   name: "Document",
   components: {},
   data() {
     return {
-      md: new showdown.Converter().makeHtml(md),
+      mdHtml: null,
     };
   },
   mounted() {},
   methods: {},
   computed: {
     menus() {
+      const paths = this.$route.path.split("/");
+      import("../markdown/" + paths[1] + "/" + paths[2] + ".md").then((Component) => {
+        this.mdHtml = new showdown.Converter({ tables: true }).makeHtml(Component.default);
+      });
       return this.$route.matched[0].children;
-    },
-    path() {
-      return this.$route.path;
     },
   },
 };

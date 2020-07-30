@@ -135,9 +135,9 @@ const router = createRouter({
               component: Document,
             },
             {
-              path: "/develop/preitter",
+              path: "/develop/prettier",
               meta: {
-                title: "Preitter 配置",
+                title: "Prettier 配置",
               },
               component: Document,
             },
