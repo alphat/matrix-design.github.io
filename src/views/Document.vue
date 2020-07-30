@@ -22,7 +22,7 @@
   </main>
 </template>
 <script>
-import showdown from "showdown";
+import mdIt from "markdown-it";
 export default {
   name: "Document",
   components: {},
@@ -36,8 +36,8 @@ export default {
   computed: {
     menus() {
       const paths = this.$route.path.split("/");
-      import("../markdown/" + paths[1] + "/" + paths[2] + ".md").then((Component) => {
-        this.mdHtml = new showdown.Converter({ tables: true }).makeHtml(Component.default);
+      import("../markdown/" + paths[1] + "/" + paths[2] + ".md").then((res) => {
+        this.mdHtml = new mdIt().render(res.default);
       });
       return this.$route.matched[0].children;
     },
