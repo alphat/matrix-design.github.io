@@ -45,6 +45,9 @@ a {
   }
   p {
     margin: 15px 0;
+  }
+  p,
+  h3 {
     code {
       display: inline-block;
       padding: 2px 4px;
@@ -72,13 +75,25 @@ a {
   }
   blockquote {
     padding: 0 20px;
-    margin: 20px 0;
+    margin: 20px 0 0;
     line-height: 40px;
     border-left: 4px solid #e5e5e5;
     p {
       margin: 0;
       padding: 0;
     }
+  }
+  pre {
+    font-size: 15px;
+    line-height: 1.4;
+    margin-bottom: 0;
+    padding: 10px 15px;
+    border-radius: 3px;
+    background-color: #f7f7f7;
+  }
+  pre + pre,
+  blockquote + blockquote {
+    margin-top: 0;
   }
   table {
     width: 100%;

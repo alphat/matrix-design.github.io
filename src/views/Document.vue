@@ -23,6 +23,8 @@
 </template>
 <script>
 import mdIt from "markdown-it";
+import hlJs from "highlight.js";
+import "highlight.js/styles/github.css";
 export default {
   name: "Document",
   components: {},
@@ -37,7 +39,17 @@ export default {
     menus() {
       const paths = this.$route.path.split("/");
       import("../markdown/" + paths[1] + "/" + paths[2] + ".md").then((res) => {
-        this.mdHtml = new mdIt().render(res.default);
+        this.mdHtml = new mdIt({
+          highlight: function (str, lang) {
+            if (lang && hlJs.getLanguage(lang)) {
+              try {
+                return hlJs.highlight(lang, str).value;
+              } catch (__) {}
+            }
+
+            return ""; // use external default escaping
+          },
+        }).render(res.default);
       });
       return this.$route.matched[0].children;
     },

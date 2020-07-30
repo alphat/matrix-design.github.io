@@ -15,10 +15,10 @@
 ### 4. JS/JSX 中的组件名使用 **大驼峰(PascalCase) **
 
 ```javascript
-import MxInput from './input';
+import MxInput from "./input";
 
 export default {
-  name: 'MxInput',
+  name: "MxInput",
   // ...
 };
 ```
@@ -73,7 +73,7 @@ props: {
 
 > 请先处理好数据，再使用 v-for
 
-### 10. 指令缩写 (用 `:` 表示 `v-bind:`、用 `@` 表示 `v-on:` 和用 `#` 表示 `v-slot:`)
+### 10. 指令缩写，用 `:` 表示 `v-bind:`、用 `@` 表示 `v-on:` 和用 `#` 表示 `v-slot:`
 
 ### 11. **组件模板应该只包含简单的表达式，复杂的表达式则应该重构为计算属性或方法。**
 
@@ -82,11 +82,11 @@ props: {
 {
   {
     fullName
-      .split(' ')
+      .split(" ")
       .map(function (word) {
         return word[0].toUpperCase() + word.slice(1);
       })
-      .join(' ');
+      .join(" ");
   }
 }
 ```
