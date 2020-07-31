@@ -1,4 +1,4 @@
-Prettier 配置 [https://prettier.io/docs/en/options.html](https://prettier.io/docs/en/options.html)
+Prettier 配置说明：[**https://prettier.io/docs/en/options.html**](https://prettier.io/docs/en/options.html)
 
 | 参数与值                         | 配置说明                                 | 官方默认值  |
 | -------------------------------- | ---------------------------------------- | ----------- |
