@@ -20,5 +20,5 @@ Prettier 配置 [https://prettier.io/docs/en/options.html](https://prettier.io/d
 | proseWrap: 'preserve'            | 使用默认的折行标准                       | 'preserve'  |
 | htmlWhitespaceSensitivity: 'css' | 根据显示样式决定 html 要不要折行         | 'css'       |
 | vueIndentScriptAndStyle: false   | vue 文件中 script style 标签，是否缩进   | false       |
-| endOfLine: 'auto'                | 换行符使用 lf                            | 'auto'      |
+| endOfLine: 'lf'                  | 换行符使用 lf                            | 'lf'        |
 |                                  |                                          |             |
