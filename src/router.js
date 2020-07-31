@@ -176,7 +176,10 @@ const router = createRouter({
   ],
 });
 
-router.afterEach(() => {
+router.afterEach((to) => {
+  const t = to.meta.title;
+  const main = "Matrix Design";
+  document.title = t === "首页" ? main : t + " - " + main;
   window.scrollTo(0, 0);
 });
 
