@@ -176,6 +176,7 @@ menu.sidebar {
     display: none;
   }
   .container {
+    word-break: break-all;
     margin: 0;
     .panel {
       margin: 10px 0;
