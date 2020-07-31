@@ -154,14 +154,23 @@ const router = createRouter({
     },
     {
       path: "/component/uni",
+      meta: {
+        title: "小程序/H5",
+      },
       component: Component,
     },
     {
       path: "/component/rn",
+      meta: {
+        title: "手机 APP",
+      },
       component: Component,
     },
     {
       path: "/component/pc",
+      meta: {
+        title: "桌面 PC",
+      },
       component: Component,
     },
   ],

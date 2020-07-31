@@ -13,12 +13,9 @@
             <div class="bread-icon bottom" />
           </div>
           <div class="menu" @click="closeMenuBread">
-            <router-link to="/">首页</router-link>
-            <router-link to="/design">设计语言</router-link>
-            <router-link to="/develop">开发文档</router-link>
-            <router-link to="/component/uni">小程序/H5</router-link>
-            <router-link to="/component/rn">手机 APP</router-link>
-            <router-link to="/component/pc">桌面 PC</router-link>
+            <router-link v-for="(menu, index) in menus" :key="index" :to="menu.path">
+              {{ menu.meta.title }}
+            </router-link>
           </div>
         </div>
       </div>
@@ -43,6 +40,11 @@ export default {
     },
     closeMenuBread() {
       this.menuBreadOpen = false;
+    },
+  },
+  computed: {
+    menus() {
+      return this.$router.options.routes;
     },
   },
 };
