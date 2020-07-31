@@ -31,6 +31,7 @@ a {
     justify-content: center;
     width: 550px;
     margin: auto;
+    padding-bottom: env(safe-area-inset-bottom);
     img {
       width: 180px;
       height: 44px;
@@ -134,6 +135,7 @@ a {
   }
   .footer {
     margin-bottom: 10px !important;
+    padding-bottom: 0 !important;
     .content {
       flex-direction: column;
       width: 100%;
