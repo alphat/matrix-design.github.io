@@ -1,13 +1,13 @@
-Prettier 配置 [**https://prettier.io/docs/en/options.html**](https://prettier.io/docs/en/options.html)
+Prettier 配置 [https://prettier.io/docs/en/options.html](https://prettier.io/docs/en/options.html)
 
 | 参数与值                         | 配置说明                                 | 官方默认值  |
 | -------------------------------- | ---------------------------------------- | ----------- |
-| printWidth: **100**              | 一行最多 100 字符                        | 80          |
+| printWidth: **_100_**            | 一行最多 100 字符                        | 80          |
 | tabWidth: 2                      | 使用 2 个空格缩进                        | 2           |
 | useTabs: false                   | 不使用缩进符，而使用空格                 | false       |
 | semi: true                       | 行尾需要有分号                           | true        |
-| singleQuote: **true**            | 使用单引号                               | false       |
-| quoteProps: **'preserve'**       | 保持原有的不变                           | 'as-needed' |
+| singleQuote: **_true_**          | 使用单引号                               | false       |
+| quoteProps: **_'preserve'_**     | 保持原有的不变                           | 'as-needed' |
 | jsxSingleQuote: false            | jsx 不使用单引号，而使用双引号           | false       |
 | trailingComma: 'es5'             | 按照 es5 标准对象数组未尾加逗号          | 'es5'       |
 | bracketSpacing: true             | 大括号内的首尾需要空格                   | true        |

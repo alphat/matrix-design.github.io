@@ -156,4 +156,31 @@ menu.sidebar {
   line-height: 20px;
   margin-bottom: 20px;
 }
+@media (min-width: 768px) and (max-width: 980px) {
+  menu.sidebar {
+    .sidebar__menu,
+    .sidebar__bg {
+      top: 60px !important;
+    }
+  }
+  .container {
+    margin: 15px;
+    margin-left: 235px;
+    .panel {
+      padding: 15px;
+    }
+  }
+}
+@media (max-width: 767px) {
+  menu.sidebar {
+    display: none;
+  }
+  .container {
+    margin: 0;
+    .panel {
+      margin: 10px 0;
+      padding: 15px;
+    }
+  }
+}
 </style>
